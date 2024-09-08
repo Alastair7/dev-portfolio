@@ -7,6 +7,7 @@ export default {
         transparent: "transparent",
         current: "currentColor",
         raising_black: "#1E1E24",
+        raising_black_100: "#353540",
         jet: "#444140",
         seashell: "#F7EBE8",
         atomic_tangerine: "#FFA987",
