@@ -8,7 +8,7 @@ function App() {
         <Profile />
       </div>
 
-      <div className="flex flex-row justify-center items-center w-full h-28 2xl:h-48 bg-raising_black_100">
+      <div className="flex flex-row justify-center items-center w-full h-32 2xl:h-48 bg-raising_black_100">
         <About />
       </div>
     </>
