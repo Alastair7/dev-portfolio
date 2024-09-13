@@ -3,6 +3,7 @@ import ArrowPrev from "./assets/arrow_prev.svg";
 import { About } from "./components/About/About";
 import { Profile } from "./components/Profile/Profile";
 import { Project } from "./components/Projects/Project";
+import { ProjectCounter } from "./components/Projects/ProjectCounter";
 
 function App() {
   return (
@@ -10,7 +11,6 @@ function App() {
       <div className=" flex justify-center items-center bg-raising_black">
         <Profile />
       </div>
-
       <div className="flex justify-center items-center my-4">
         <About />
       </div>
@@ -27,6 +27,7 @@ function App() {
           </span>
         </button>
       </div>
+      <ProjectCounter currentProject={0} projects={[]} />{" "}
     </>
   );
 }
