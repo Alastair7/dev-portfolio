@@ -11,17 +11,17 @@ function App() {
         <Profile />
       </div>
 
-      <div className="flex justify-center items-center w-full h-32 2xl:h-48">
+      <div className="flex justify-center items-center my-4">
         <About />
       </div>
       <div className="flex justify-center items-center m-1">
-        <button className="size-10">
+        <button className="size-10 mr-2">
           <span>
             <img src={ArrowPrev}></img>
           </span>
         </button>
         <Project />
-        <button className="size-10">
+        <button className="size-10 ml-2">
           <span>
             <img src={ArrowNext}></img>
           </span>
