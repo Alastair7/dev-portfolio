@@ -4,6 +4,7 @@ import { About } from "./components/About/About";
 import { Profile } from "./components/Profile/Profile";
 import { Project } from "./components/Projects/Project";
 import { ProjectCounter } from "./components/Projects/ProjectCounter";
+import { Button } from "./shared/Button";
 
 function App() {
   return (
@@ -15,19 +16,11 @@ function App() {
         <About />
       </div>
       <div className="flex justify-center items-center m-1">
-        <button className="size-10 mr-2">
-          <span>
-            <img src={ArrowPrev}></img>
-          </span>
-        </button>
+        <Button className="size-10 mr-2" icon={ArrowPrev} />
         <Project />
-        <button className="size-10 ml-2">
-          <span>
-            <img src={ArrowNext}></img>
-          </span>
-        </button>
+        <Button className="size-10 ml-2" icon={ArrowNext} />
       </div>
-      <ProjectCounter currentProject={0} projects={[]} />{" "}
+      <ProjectCounter currentProject={0} projects={[]} />
     </>
   );
 }
