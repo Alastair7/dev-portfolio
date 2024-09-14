@@ -1,16 +1,14 @@
+import React from "react";
+
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: string;
-  icon?: string;
+  icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 };
 const Button: React.FC<Props> = ({ label, icon, ...rest }: Props) => {
   return (
     <button {...rest}>
       {label ? label : null}
-      {icon ? (
-        <span>
-          <img src={icon} />
-        </span>
-      ) : null}
+      {icon ? <span>{React.createElement(icon)}</span> : null}
     </button>
   );
 };

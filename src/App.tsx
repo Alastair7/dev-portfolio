@@ -1,5 +1,5 @@
-import ArrowNext from "./assets/arrow_next.svg";
-import ArrowPrev from "./assets/arrow_prev.svg";
+import { ReactComponent as ArrowNext } from "./assets/arrow_next.svg";
+import { ReactComponent as ArrowPrev } from "./assets/arrow_prev.svg";
 import { About } from "./components/About/About";
 import { Profile } from "./components/Profile/Profile";
 import { Project } from "./components/Projects/Project";
