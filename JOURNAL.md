@@ -21,8 +21,11 @@ Also I am trying to import SVGs like this: `import { ReactComponent as ArrowPrev
 
 ### 15/09/2024 - 8:03 p.m
 
-I have added some functionality to the next and previous project buttons. Somehow I got lost because I wasn't understanding why useState wasn't updating the state.
-But solve it, it seems to be working now. I have solved the svg problem too (couldn't import svg as react components).
+I have added some functionality to the next and previous project buttons. 
+Somehow I got lost because I wasn't understanding why useState wasn't updating the state.
+But solve it by changing a little bit the logic of currentProject and setCurrentProject. 
+
+I have solved the svg problem too (couldn't import svg as react components).
 
 My next objective is to fix some details on the project component, because buttons are "jumping" when the project div change its height due to its content.
 Probably the best is to add some absolute positioning and relative...
