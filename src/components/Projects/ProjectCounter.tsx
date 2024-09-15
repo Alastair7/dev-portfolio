@@ -1,14 +1,12 @@
 type Props = {
-  currentProject: number;
-  projects: number[];
+  projectIndex: number;
+  projectsSize: number;
 };
-const ProjectCounter = ({ currentProject, projects }: Props) => {
-  const projectsSize = projects.length;
-
+const ProjectCounter = ({ projectIndex, projectsSize }: Props) => {
   return (
     <div className="flex justify-center items-center text-white">
       <p>
-        {currentProject}/{projectsSize}
+        {projectIndex}/{projectsSize}
       </p>
     </div>
   );

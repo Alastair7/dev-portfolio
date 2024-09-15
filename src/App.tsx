@@ -1,12 +1,37 @@
-import { ReactComponent as ArrowNext } from "./assets/arrow_next.svg";
-import { ReactComponent as ArrowPrev } from "./assets/arrow_prev.svg";
+import { useState } from "react";
+import ArrowNext from "./assets/arrow_next.svg?react";
+import ArrowPrev from "./assets/arrow_prev.svg?react";
 import { About } from "./components/About/About";
 import { Profile } from "./components/Profile/Profile";
+import { ProjectPreview } from "./components/Projects/domain";
 import { Project } from "./components/Projects/Project";
 import { ProjectCounter } from "./components/Projects/ProjectCounter";
 import { Button } from "./shared/Button";
 
 function App() {
+  const projects: ProjectPreview[] = [
+    {
+      id: 1,
+      title: "Shopper",
+      description:
+        "Final DAM project.\n It was developed during my last year as a student.",
+    },
+    { id: 2, title: "Xenopedia", description: "First project ever." },
+    { id: 3, title: "Test", description: "TestDescription" },
+  ];
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const onNextClick = () => {
+    setCurrentProjectIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+  const onPreviousClick = () => {
+    setCurrentProjectIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <>
       <div className=" flex justify-center items-center bg-raising_black">
@@ -16,11 +41,22 @@ function App() {
         <About />
       </div>
       <div className="flex justify-center items-center m-1">
-        <Button className="size-10 mr-2" icon={ArrowPrev} />
-        <Project />
-        <Button className="size-10 ml-2" icon={ArrowNext} />
+        <Button
+          className="size-10 mr-2"
+          onClick={onPreviousClick}
+          icon={ArrowPrev}
+        />
+        <Project project={projects[currentProjectIndex]} />
+        <Button
+          className="size-10 ml-2"
+          onClick={onNextClick}
+          icon={ArrowNext}
+        />
       </div>
-      <ProjectCounter currentProject={0} projects={[]} />
+      <ProjectCounter
+        projectIndex={currentProjectIndex + 1}
+        projectsSize={projects.length}
+      />
     </>
   );
 }
