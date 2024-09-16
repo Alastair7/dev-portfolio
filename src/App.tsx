@@ -14,7 +14,7 @@ function App() {
       id: 1,
       title: "Shopper",
       description:
-        "Final DAM project.\n It was developed during my last year as a student.",
+        "Final DAM project.\n It was developed during my last year as a student.\n It was developed with Android studio and Kotlin. Also with Firebase Auth and Firebase Database.",
     },
     { id: 2, title: "Xenopedia", description: "First project ever." },
     { id: 3, title: "Test", description: "TestDescription" },
